@@ -159,9 +159,7 @@ ul {
 }
 
 /* home */
-.main-container {
-  width: 100%;
-}
+
 .home {
   min-height: 100hv;
   display: flex;
@@ -598,5 +596,10 @@ h3.my-profession {
     z-index: 200;
     border-radius: 5px;
     cursor: pointer;
+  }
+}
+@media screen and (max-width: 750px) {
+  body {
+    min-width: 800px;
   }
 }
