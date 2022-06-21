@@ -12,7 +12,9 @@ body.dark {
   --text-black-900: #ffffff;
   --text-black-700: #e9e9e9;
 }
+
 body {
+  width: 100%;
   line-height: 1.5;
   font-size: 16px;
 }
@@ -41,7 +43,6 @@ ul {
   padding: 0 30px;
   opacity: 1;
 }
-
 .padd-15 {
   padding-left: 15px;
   padding-right: 15px;
@@ -158,6 +159,9 @@ ul {
 }
 
 /* home */
+.main-container {
+  width: 100%;
+}
 .home {
   min-height: 100hv;
   display: flex;
@@ -514,7 +518,7 @@ h3.my-profession {
 .style-switcher {
   position: fixed;
   right: 0;
-  top: 10px;
+  top: 15px;
   padding: 15px;
   width: 200px;
   /* border: 1px solid var(--bg-black-50); */
