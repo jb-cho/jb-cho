@@ -524,4 +524,7 @@ h3.my-profession {
   cursor: pointer;
 }
 @media (max-width: 767px) {
+  html {
+    width: 100%;
+  }
 }
