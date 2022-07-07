@@ -6,17 +6,24 @@ const typed = new Typed(".typing", {
   loop: true,
 });
 
-const nav = document.querySelectorAll(".menu_link");
-// querySectorAll 을 사용할 경우 NodeList(i) 처럼 배열처럼 생긴 유사배열이 생겨 흔히 사용하던 method를 사용할수 없음. 이럴 경우 Array.from을 이용해 배열로 만들어줄수 있고, 각각에 대해서는 for문을 이용해 이벤트를 전파시킬수 있음
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll("nav ul li");
 
-console.log(nav);
+window.addEventListener("scroll", () => {
+  let current = "";
 
-const navHandler = (e) => {
-  Array.from(nav).forEach((e) => {
-    e.className = "menu_link";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset > sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
   });
-  e.target.classList.add("active");
-};
-for (let i = 0; i < nav.length; i++) {
-  nav[i].addEventListener("click", navHandler);
-}
+  console.log(current);
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
+});
