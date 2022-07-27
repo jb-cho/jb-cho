@@ -475,6 +475,7 @@ h3.my-profession {
   margin-bottom: 30px;
   /* flex-direction: column; */
   display: flex;
+  min-height: 250px;
 }
 .portfolio-item-textBox {
   /* display: flex;
