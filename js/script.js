@@ -1,6 +1,6 @@
 // typing animation
 const typed = new Typed(".typing", {
-  strings: ["프론트엔드 개발자", "웹 개발자"],
+  strings: ["서버 개발자", "웹 개발자"],
   typeSpeed: 150,
   BackSpeed: 10,
   loop: true,
